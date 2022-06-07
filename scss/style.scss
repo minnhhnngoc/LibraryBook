@@ -1,0 +1,363 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+@import "style-color";
+@import "mixin";
+@import "flex"; //display - align - justify
+
+
+.head {
+    .container {
+        height: 90px;
+    }
+
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: $pageColor;
+
+    i {
+        font-size: 1.4rem;
+        @include hover_text($primaryColor, $effectColor)
+    }
+
+    h1 {
+        @include hover_text($primaryColor, $effectColor)
+    }
+
+    .search-box {
+        position: relative;
+
+        input {
+            font-size: 17px;
+            padding-left: 16px;
+        }
+
+        i {
+            position: absolute;
+            top: 6.8px;
+            right: 16px;
+            cursor: pointer;
+        }
+
+        .search-txt {
+            @include width-height(450px, 30px);
+            margin-right: 5px;
+            border-radius: 15px;
+            border: 3px $primaryColor solid;
+
+        }
+    }
+
+    .cart {
+        @include width-height(35px, 35px);
+        border: 2px solid $primaryColor;
+        border-radius: 50%;
+        position: relative;
+
+        i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        span {
+            position: absolute;
+            @include width-height(16px, 16px);
+            top: -4px;
+            right: -4px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 13px;
+            color: $pageColor;
+            background-color: $saleColor;
+        }
+
+    }
+
+    .info {
+        font-size: 20px;
+
+        a {
+            @include hover_text($primaryColor, $effectColor)
+        }
+
+        span {
+            color: $primaryColor;
+            margin: 0 5px;
+        }
+    }
+}
+
+.head-links {
+    height: 76.8px;
+    background-color: $primaryColor;
+    font-weight: bold;
+    font-size: 13px;
+
+    .btn-head {
+        background-color: $primaryColor;
+        padding: 30px;
+        border: none;
+        font-weight: 500;
+        font-size: 14px;
+
+        &:hover {
+            background-color: $effectColor;
+        }
+
+        a {
+            color: white;
+        }
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+
+        &:hover .drop-content {
+            display: block;
+        }
+
+        &:hover .drop-btn {
+            background-color: $effectColor;
+        }
+
+        .drop-btn {
+            color: white;
+            cursor: pointer;
+        }
+
+        .drop-content {
+            display: none;
+            position: absolute;
+            background: #f9f9f9f9;
+
+
+            .intro {
+                min-width: 150px;
+            }
+
+            .name-book {
+                min-width: 200px;
+            }
+
+            box-shadow: 0px 8px 16px 0px black(173, 3, 28, 0.977);
+            z-index: 1;
+
+            a {
+                color: $primaryColor;
+                padding: 12px 20px;
+                display: block;
+
+                &:hover {
+                    background-color: $effectColor;
+                }
+            }
+        }
+    }
+}
+
+
+.content {
+    margin-top: 50px;
+    background: $pageColor;
+
+    .head-content {
+        padding: 20px 30px 20px 30px;
+        border-bottom: 2px solid $primaryColor;
+        margin-bottom: 20px;
+
+        .title-content {
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .btn-content {
+            font-weight: bold;
+            @include button(white, 14px, $primaryColor, 15px, 10px, 20px);
+        }
+    }
+
+    .sell-book {
+
+        .info-book {
+            @include width-height(220px, 400px);
+            position: relative;
+
+            &:hover {
+
+                .add-cart,
+                .buy-book {
+                    display: block;
+                    opacity: 0.9;
+                }
+
+                img {
+                    border: 1px solid rgba($color: #333, $alpha: 0.2);
+                    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+                }
+            }
+
+            img {
+                @include width-height(100%, 60%);
+                transition: 0.4s;
+            }
+
+            .add-cart {
+                position: absolute;
+                transition: 0.3s;
+                top: 48%;
+                left: 4%;
+                display: none;
+                font-weight: 600;
+                @include button($pageColor, 12px, $saleColor, 10px, 10px, 12px);
+            }
+
+            .buy-book {
+                position: absolute;
+                top: 48%;
+                right: 3%;
+                display: none;
+                font-weight: 600;
+                @include button($pageColor, 12px, $saleColor, 10px, 10px, 20px);
+            }
+
+            .rate-sale {
+                position: absolute;
+                top: 0;
+                right: 0;
+                border-radius: 2px;
+                background-color: $saleColor;
+                padding: 8px 14px;
+                color: white;
+            }
+
+            p {
+
+                &.title-book {
+                    padding: 5px 5px 0px 5px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    @include line-clamp(2);
+                    @include hover_text($primaryColor, $effectColor)
+                }
+
+                &.author {
+                    color: $authorColor;
+                    font-size: 15px;
+                    padding: 5px 0px 5px 5px;
+                }
+
+                &.price {
+                    color: $primaryColor;
+                    text-decoration: line-through;
+                    padding: 0px 0px 5px 5px;
+                }
+
+                &.price-sale {
+                    color: $saleColor;
+                    padding: 0px 0px 5px 5px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $primaryColor;
+    margin-top: 100px;
+
+    .container {
+        height: 240px;
+    }
+
+    h3,
+    p,
+    i {
+        color: white;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .footer-one {
+        @include width-height(450px, 140px);
+
+        .about {
+            margin-bottom: 10px;
+        }
+
+        .content-author {
+            font-size: 14px;
+            text-align: right;
+        }
+    }
+
+    .footer-two {
+        height: 140px;
+
+        .links {
+            width: 100px;
+            padding-bottom: 10px;
+
+            &:hover {
+
+                i,
+                p {
+                    color: $effectColor;
+                }
+            }
+
+            i {
+                padding-right: 10px;
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+
+        }
+    }
+
+    .footer-three {
+        height: 140px;
+
+        .mar-bottom {
+            margin-bottom: 10px;
+        }
+
+        i {
+            margin-right: 10px;
+        }
+
+        .phone {
+            i {
+                font-size: 18px;
+            }
+        }
+
+        .mail {
+
+            &:hover {
+
+                i,
+                p {
+                    color: $effectColor;
+                }
+            }
+        }
+    }
+}

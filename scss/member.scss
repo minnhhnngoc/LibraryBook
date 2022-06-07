@@ -1,0 +1,130 @@
+@import "flex";
+@import "style-color";
+
+body {
+    font-family: 'Fugaz One', cursive;
+    background: linear-gradient(120deg, $bg-1, $bg-2);
+    overflow: hidden;
+    height: 90vh;
+}
+
+.title {
+    text-align: center;
+    color: $textColor;
+    font-weight: 700;
+    font-size: 40px;
+    margin: 30px 0px;
+
+    i {
+        padding-right: 10px;
+    }
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.member {
+    height: 500px;
+    width: 350px;
+
+    .img {
+        position: relative;
+        width: 100%;
+        height: 40%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+        }
+
+        .inf {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.5);
+            bottom: 0;
+            left: 0;
+            height: 20%;
+            width: 80%;
+            padding: 15px;
+
+            h3 {
+                font-size: 20px;
+                color: $textColor;
+            }
+
+            p {
+                font-size: 16px;
+                margin-top: 5px;
+                color: $taxColor;
+            }
+        }
+    }
+
+    .logo {
+        height: 10%;
+        width: 100%;
+        box-sizing: border-box;
+        background: $pri-memberColor;
+        border-bottom: 2px solid $textColor;
+        border-top: 2px solid #F5BABE;
+
+        h2 {
+            color: $textColor;
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+
+    .skill-grid {
+        max-width: 350px;
+        height: 200px;
+        background-color: $textColor;
+        padding: 25px 30px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+
+        h2 {
+            font-weight: 600;
+            font-size: 24px;
+            color: $inf-memberColor;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .bar {
+            float: left;
+            width: 33%;
+
+            p {
+                font-size: 17px;
+                color: $inf-memberColor;
+                font-weight: 600;
+                margin: 7px 0;
+            }
+        }
+
+        .skills {
+            background: #dedede;
+            float: right;
+            width: 63%;
+            height: 22px;
+            margin: 9px 0px;
+            border-radius: 5px;
+
+            .skill {
+                background: $pri-memberColor;
+                border-radius: 5px;
+                margin: 3px 3px;
+                height: 71%;
+
+            }
+        }
+
+        .clear {
+            clear: both;
+        }
+    }
+}

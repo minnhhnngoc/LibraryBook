@@ -1,0 +1,113 @@
+@import "style-color";
+@import "flex";
+@import "mixin";
+
+body {
+    font-family: 'Fugaz One', cursive;
+    background: linear-gradient(120deg, $bg-1, $bg-2);
+    overflow: hidden;
+    height: 100vh;
+}
+
+img {
+    @include width-height(150px, 150px);
+    border-radius: 50%;
+    border: 3px solid white;
+    transition: all 0.4s ease-in-out;
+}
+
+.hover {
+    position: relative;
+    margin-bottom: 25px;
+
+    &:hover {
+        .caption {
+            opacity: 1;
+            transform: translateY(-30px);
+        }
+
+        img {
+            transform: scale(1.1);
+        }
+    }
+
+    .caption {
+        position: absolute;
+        @include width-height(150px, 40px);
+        opacity: 0;
+        left: 30%;
+        bottom: -3px;
+        transition: all 0.4s ease-in-out;
+
+        .blur,
+        .title {
+            @include width-height(80%, 100%);
+            @include width-height(80%, 100%);
+            position: absolute;
+        }
+
+        .blur {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+        }
+
+        .title {
+            color: #fff;
+            text-align: center;
+            top: 10px;
+            font-weight: 600;
+        }
+    }
+}
+
+.container {
+    @include width-height(100%, 80%);
+}
+
+h1 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 42px;
+    color: whitesmoke;
+
+    i {
+        margin-right: 10px;
+    }
+}
+
+.profile-cards {
+    width: 800px;
+    margin: 0 auto;
+
+    .card {
+        border-radius: 20px;
+        @include width-height(300px, 350px);
+        background-color: rgba($color: black, $alpha: 0.7);
+        text-align: center;
+        padding: 30px;
+
+        h2 {
+            color: white;
+            margin-bottom: 50px;
+        }
+    }
+
+    .btn-content {
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+        background-color: transparent;
+        border: 2px solid white;
+        cursor: pointer;
+        padding: 20px 40px;
+        transition: all 0.3s linear;
+
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+
+    }
+}

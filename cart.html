@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/public/css/style-cart.css">
+    <link rel="icon" href="/img_home_page/book-solid.svg">
+    <title>Cart</title>
+</head>
+
+<body>
+    <div class="header">
+        <a href="/index.html">
+            <h1>LibraryBook.com</h1>
+        </a>
+    </div>
+    <div class="container">
+        <div class="cart-item">
+            <form action="">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sản Phẩm</th>
+                            <th>Tên Sản Phẩm</th>
+                            <th>Giá</th>
+                            <th>SL</th>
+                            <th>Chọn</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mycart"></tbody>
+                </table>
+            </form>
+        </div>
+        <div class="total">
+            <p class="total-price">Tổng tiền:<span id="in-total">0</span><sup>đ</sup></p>
+        </div>
+    </div>
+    <div class="btn-buy">
+        <a href="/index.html"><button class="continue-buy">Tiếp tục mua</button></a>
+        <button class="to-pay">Thanh Toán</button>
+    </div>
+    <div class="footer">
+        <div class="container flex-center-between">
+            <div class="footer-one">
+                <h3>Giới Thiệu</h3>
+                <p class="about">Một cuốn sách thực sự hay nên đọc trong tuổi trẻ,
+                    rồi đọc lại khi đã trưởng thành, và một lần nữa lúc tuổi già,
+                    giống như một tòa nhà đẹp nên được chiêm ngưỡng trong ánh
+                    bình minh, nắng trưa và ánh trăng.
+                </p>
+                <p class="content-author">- Robertson Davies</p>
+            </div>
+            <div class="footer-two">
+                <h3>Theo Dõi Chúng Tôi Trên</h3>
+                <a target="_blank" href="/profile-fb.html" class="links flex-center">
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <p class="link-follow">facebook</p>
+                </a>
+                <a target="_blank" href="/profile-ig.html" class="links flex-center">
+                    <i class="fa-brands fa-instagram"></i>
+                    <p class="link-follow">instagram</p>
+                </a>
+            </div>
+            <div class="footer-three">
+                <h3>Thông Tin Liên Hệ</h3>
+                <div class="flex mar-bottom address">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <p>Đại Học Công Nghiệp Thực Phẩm TP.HCM</p>
+                </div>
+                <div class="flex mar-bottom phone">
+                    <i class="fa-solid fa-square-phone"></i>
+                    <p>0123456789</p>
+                </div>
+                <a target="_blank"
+                    href="https://accounts.google.com/ServiceLogin/identifier?service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                    class="flex mar-bottom mail">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>huynhanhtuan8547@gmail.com</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/js/page.js"></script>
+<script>
+    showCart();
+</script>
+
+</html>

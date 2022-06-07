@@ -1,0 +1,33 @@
+@mixin line-clamp($line) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+    overflow: hidden;
+}
+
+@mixin hover_text($color_text, $color_hover) {
+    color: $color_text;
+
+    &:hover {
+        color: $color_hover;
+    }
+}
+
+@mixin button($color, $font-size, $bg-color, $border-radius, $p-top-bottom, $p-left-right) {
+    color: $color;
+    font-size: $font-size;
+    background-color: $bg-color;
+    border-radius: $border-radius;
+    padding: $p-top-bottom $p-left-right;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $effectColor;
+    }
+}
+
+@mixin width-height($w, $h) {
+    width: $w;
+    height: $h;
+}

@@ -1,0 +1,220 @@
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+.dis-none {
+  display: none;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-center-around {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.flex-center-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-end-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jcenter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-center-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body {
+  font-family: 'Fugaz One', cursive;
+  background: linear-gradient(120deg, #2980b9, #8e44ad);
+  overflow: hidden;
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 40px;
+  margin: 30px 0px;
+}
+
+.title i {
+  padding-right: 10px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.member {
+  height: 600px;
+  width: 350px;
+}
+
+.member .img {
+  position: relative;
+  width: 100%;
+  height: 40%;
+}
+
+.member .img img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.member .img .inf {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
+  height: 20%;
+  width: 80%;
+  padding: 15px;
+}
+
+.member .img .inf h3 {
+  font-size: 20px;
+  color: #fff;
+}
+
+.member .img .inf p {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #A7A5A5;
+}
+
+.member .logo {
+  height: 10%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #ef717a;
+  border-bottom: 2px solid #fff;
+  border-top: 2px solid #F5BABE;
+}
+
+.member .logo h2 {
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.member .skill-grid {
+  max-width: 350px;
+  height: 200px;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.member .skill-grid h2 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #373737;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+.member .skill-grid .bar {
+  float: left;
+  width: 33%;
+}
+
+.member .skill-grid .bar p {
+  font-size: 17px;
+  color: #373737;
+  font-weight: 600;
+  margin: 7px 0;
+}
+
+.member .skill-grid .skills {
+  background: #dedede;
+  float: right;
+  width: 63%;
+  height: 22px;
+  margin: 9px 0px;
+  border-radius: 5px;
+}
+
+.member .skill-grid .skills .skill {
+  background: #ef717a;
+  border-radius: 5px;
+  margin: 3px 3px;
+  height: 71%;
+}
+
+.member .skill-grid .clear {
+  clear: both;
+}
+/*# sourceMappingURL=member.css.map */

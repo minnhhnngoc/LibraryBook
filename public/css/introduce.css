@@ -1,0 +1,390 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+.dis-none {
+  display: none;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-center-around {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.flex-center-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-end-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jcenter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-center-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.head {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: #ffffff;
+}
+
+.head .container {
+  height: 90px;
+}
+
+.head i {
+  font-size: 1.4rem;
+  color: black;
+}
+
+.head i:hover {
+  color: red;
+}
+
+.head h1 {
+  color: black;
+}
+
+.head h1:hover {
+  color: red;
+}
+
+.head .search-box {
+  position: relative;
+}
+
+.head .search-box input {
+  font-size: 17px;
+  padding-left: 16px;
+}
+
+.head .search-box i {
+  position: absolute;
+  top: 6.8px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.head .search-box .search-txt {
+  width: 450px;
+  height: 30px;
+  margin-right: 5px;
+  border-radius: 15px;
+  border: 3px black solid;
+}
+
+.head .cart {
+  width: 35px;
+  height: 35px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+}
+
+.head .cart i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.head .cart span {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: -4px;
+  right: -4px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 13px;
+  color: #ffffff;
+  background-color: crimson;
+}
+
+.head .info {
+  font-size: 20px;
+}
+
+.head .info a {
+  color: black;
+}
+
+.head .info a:hover {
+  color: red;
+}
+
+.head .info span {
+  color: black;
+  margin: 0 5px;
+}
+
+.head-links {
+  height: 76.8px;
+  background-color: black;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.head-links .btn-head {
+  background-color: black;
+  padding: 30px;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.head-links .btn-head:hover {
+  background-color: red;
+}
+
+.head-links .btn-head a {
+  color: white;
+}
+
+.head-links .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.head-links .dropdown:hover .drop-content {
+  display: block;
+}
+
+.head-links .dropdown:hover .drop-btn {
+  background-color: red;
+}
+
+.head-links .dropdown .drop-btn {
+  color: white;
+  cursor: pointer;
+}
+
+.head-links .dropdown .drop-content {
+  display: none;
+  position: absolute;
+  background: #f9f9f9f9;
+  -webkit-box-shadow: 0px 8px 16px 0px black(173, 3, 28, 0.977);
+          box-shadow: 0px 8px 16px 0px black(173, 3, 28, 0.977);
+  z-index: 1;
+}
+
+.head-links .dropdown .drop-content .intro {
+  min-width: 150px;
+}
+
+.head-links .dropdown .drop-content .name-book {
+  min-width: 200px;
+}
+
+.head-links .dropdown .drop-content a {
+  color: black;
+  padding: 12px 20px;
+  display: block;
+}
+
+.head-links .dropdown .drop-content a:hover {
+  background-color: red;
+}
+
+.content {
+  margin-top: 120px;
+  height: 480px;
+}
+
+.content .border-top {
+  border-top: 2px solid grey;
+  padding-top: 50px;
+}
+
+.content .inf-content {
+  width: 55%;
+  height: 100%;
+}
+
+.content .inf-content h2 {
+  margin-bottom: 50px;
+  font-size: 40px;
+  color: crimson;
+}
+
+.content .inf-content P {
+  font-size: 18px;
+  line-height: 30px;
+  text-align: justify;
+  margin-right: 20px;
+}
+
+.content .inf-content ul li {
+  font-size: 18px;
+  line-height: 30px;
+  text-align: justify;
+  margin-left: 20px;
+}
+
+.content .img {
+  width: 42%;
+}
+
+.content .img img {
+  width: 100%;
+  height: 400px;
+}
+
+.footer {
+  background-color: black;
+  margin-top: 150px;
+}
+
+.footer .container {
+  height: 240px;
+}
+
+.footer h3,
+.footer p,
+.footer i {
+  color: white;
+}
+
+.footer h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.footer .footer-one {
+  width: 450px;
+  height: 140px;
+}
+
+.footer .footer-one .about {
+  margin-bottom: 10px;
+}
+
+.footer .footer-one .content-author {
+  font-size: 14px;
+  text-align: right;
+}
+
+.footer .footer-two {
+  height: 140px;
+}
+
+.footer .footer-two .links {
+  width: 100px;
+  padding-bottom: 10px;
+}
+
+.footer .footer-two .links:hover i,
+.footer .footer-two .links:hover p {
+  color: red;
+}
+
+.footer .footer-two .links i {
+  padding-right: 10px;
+  font-size: 18px;
+}
+
+.footer .footer-two .links p {
+  font-size: 18px;
+}
+
+.footer .footer-three {
+  height: 140px;
+}
+
+.footer .footer-three .mar-bottom {
+  margin-bottom: 10px;
+}
+
+.footer .footer-three i {
+  margin-right: 10px;
+}
+
+.footer .footer-three .phone i {
+  font-size: 18px;
+}
+
+.footer .footer-three .mail:hover i,
+.footer .footer-three .mail:hover p {
+  color: red;
+}
+/*# sourceMappingURL=introduce.css.map */

@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+@import "flex";
+@import "style-color";
+@import "mixin";
+
+.header {
+    @include width-height(265px, 100px);
+    padding-top: 50px;
+    transition: 0.5s;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    a {
+        @include hover_text($primaryColor, $effectColor);
+    }
+}
+
+.btn-buy {
+    text-align: center;
+    @include width-height(100%, 170px);
+
+    .continue-buy,
+    .to-pay {
+        font-weight: 700;
+        transition: 0.4s;
+    }
+
+    .continue-buy {
+        @include button($pageColor, 16px, $bg-1, 10px, 15px, 25px);
+        margin-right: 20px;
+    }
+
+    .to-pay {
+        left: 57%;
+        @include button($primaryColor, 16px, $btn-buy, 10px, 15px, 28px);
+    }
+}
+
+.cart-item {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid gray;
+
+
+    table,
+    tr,
+    td {
+        padding: 15px 0px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    img {
+        height: 100px;
+        width: 120px;
+        @include width-height(120px, 100px);
+    }
+
+    input {
+        width: 30px;
+        outline: none;
+    }
+
+}
+
+.total {
+    height: 50px;
+    margin: 25px 50px 0px 0px;
+    text-align: right;
+    font-size: 22px;
+    font-weight: 700;
+
+    span {
+        margin-left: 8px;
+        font-size: 24px;
+    }
+}
+
+.footer {
+    margin-top: 100px;
+    width: 100%;
+    background-color: black;
+
+    .container {
+        height: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    h3,
+    p,
+    i {
+        color: white;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .footer-one {
+        @include width-height(450px, 140px);
+
+        .about {
+            margin-bottom: 10px;
+        }
+
+        .content-author {
+            font-size: 14px;
+            text-align: right;
+        }
+    }
+
+    .footer-two {
+        height: 140px;
+
+        .links {
+            width: 100px;
+            padding-bottom: 10px;
+
+            &:hover {
+
+                i,
+                p {
+                    color: red;
+                }
+            }
+
+            i {
+                padding-right: 10px;
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+
+        }
+    }
+
+    .footer-three {
+        height: 140px;
+
+        .mar-bottom {
+            margin-bottom: 10px;
+        }
+
+        i {
+            margin-right: 10px;
+        }
+
+        .phone {
+            i {
+                font-size: 18px;
+            }
+        }
+
+        .mail {
+
+            &:hover {
+
+                i,
+                p {
+                    color: red;
+                }
+            }
+        }
+    }
+}
